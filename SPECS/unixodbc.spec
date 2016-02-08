@@ -1,6 +1,6 @@
 Summary: A complete ODBC driver manager for Linux
 Name: unixODBC
-Version: 2.3.4
+Version: %{?version}%{!?version:2.3.4}
 Release: 1%{?dist}
 Group: System Environment/Libraries
 URL: http://www.unixODBC.org/
@@ -84,7 +84,3 @@ done
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
-
-%changelog
-* Mon Feb 08 2016 Adam Yohrling <adam@immuta.com> 2.3.4-1
-- Create RPM for unixODBC 2.3.4 using logic from RHEL stock SPEC
