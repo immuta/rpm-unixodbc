@@ -47,7 +47,7 @@ make all
 rm -f %{buildroot}%{_libdir}/libodbcpsql.so*
 
 # Remove unpackaged files
-rm -f %{buildroot}%{_libdir}/*.la
+rm -f %{buildroot}%{_libdir}/*.la %{buildroot}%{_libdir}/pkgconfig/*.pc
 
 # Build package file lists
 find %{buildroot}%{_libdir} -name "*.so.*" | sed "s|^%{buildroot}||" > base-so-list
